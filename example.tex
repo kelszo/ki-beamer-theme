@@ -1,0 +1,180 @@
+\documentclass{beamer} 
+
+\title{What is Lorem Ipsum?} 
+\subtitle{Why do we use it?}
+\author{Kelvin Szolnoky}
+\institute{Karolinska Institute}    
+\date{\today}
+   
+\usetheme{KI}  
+
+      
+\begin{document}
+
+\frame{\titlepage}
+
+
+\begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[]
+\end{frame}
+
+\section{What is Lorem Ipsum?}
+
+\begin{frame}
+    \frametitle{What is Lorem Ipsum?}
+    \textbf{Lorem Ipsum} is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+\end{frame}
+
+\begin{frame}
+    \frametitle{What is Lorem Ipsum?}
+    \begin{itemize}
+        \item It has survived not only five centuries,
+              \begin{itemize}
+                  \item but also the leap into electronic typesetting, remaining essentially unchanged.
+                  \item It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              \end{itemize}
+        \item Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    \end{itemize}
+\end{frame}
+
+\section{Where does it come from?}
+
+
+\begin{frame}
+    \frametitle{Where does it come from?}
+    \begin{enumerate}
+        \item Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
+        \item Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
+        \item Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.
+    \end{enumerate}
+\end{frame}
+
+\section{Fun With Prime Numbers}
+
+\begin{frame}
+    \frametitle{What Are Prime Numbers?}
+    \begin{definition}
+        A \alert{prime number} is a number that has exactly two divisors.
+    \end{definition}
+    \begin{example}
+        \begin{itemize}
+            \item 2 is prime (two divisors: 1 and 2).
+            \item 3 is prime (two divisors: 1 and 3).
+            \item 4 is not prime (\alert{three} divisors: 1, 2, and 4).
+        \end{itemize}
+    \end{example}
+    \begin{alertblock}{Important theorem}
+        Sample text in red box
+    \end{alertblock}
+\end{frame}
+
+\section{Who is Sven Svensson?}
+
+\begin{frame}
+    \frametitle{Who is Sven Svensson?}
+    \begin{description}[Other description]
+        \item[Name] Sven Svensson
+        \item[Address] Some address
+        \item[Other description] Some description
+    \end{description}
+\end{frame}
+
+\section{Figures!}
+
+\begin{frame}
+    \frametitle{Example Figure}
+
+    \begin{figure}
+        \rule{5cm}{5cm}
+        \caption{Test}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Text and Figure!}
+
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            Here I can explain in detail what the figure represents.
+        \end{column}
+        % Column 2    
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \rule{0.7\textwidth}{0.7\textwidth}
+                \caption{A figure that is next to a certain explanation.}
+            \end{figure}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Many Figures!}
+
+    \begin{columns}[t]
+        \column{.5\textwidth}
+        \centering
+        \rule{0.6\textwidth}{0.6\textwidth}\\[1em]
+        \rule{0.6\textwidth}{0.6\textwidth}
+        \column{.5\textwidth}
+        \centering
+        \rule{0.6\textwidth}{0.6\textwidth}\\[1em]
+        \rule{0.6\textwidth}{0.6\textwidth}
+    \end{columns}
+\end{frame}
+
+\section{References!}
+
+\begin{frame}
+    \frametitle{Can We Cite?}
+    Yes we can!
+    \cite{knuth-fa}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{References}
+    \nocite{*}
+    \bibliographystyle{plain}
+    \bibliography{main.bib}
+\end{frame}
+
+\section{Other Fun!}
+
+\begin{frame}
+    \frametitle{Footnotes?}
+    What about foot notes?\footnote{Seriously? Even footnotes?}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Bugs}
+    Be weary of this though\footnote{First footnote}: large gaps when adding more than one footnote\footnote{Second}!
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Include code?}
+    {
+        \small
+        \begin{verbatim}
+    # Of course, like this:
+    def fibonacci_of(n):
+        if n in {0, 1}:  # Base case
+            return n
+        return fibonacci_of(n - 1) + fibonacci_of(n - 2) 
+    \end{verbatim}
+    }
+\end{frame}
+
+\begin{frame}
+    \frametitle{Images!}
+    \centering
+    \includegraphics[width=0.45\textwidth]{ki-logo-plum.pdf}%
+    \hspace*{1cm}
+    \includegraphics[width=0.45  \textwidth]{ki-logo-plum.pdf}
+\end{frame}
+
+
+\usebeamertemplate{endpage}
+
+\end{document}

@@ -1,0 +1,131 @@
+\mode<presentation>
+
+% SET COLOURS
+% KI colours from 20/10/2022
+\definecolor{kiplum}{RGB}{135, 0, 82}
+\definecolor{kidarkplum}{RGB}{79, 4, 51}
+\definecolor{kiorange}{RGB}{255, 135, 111}
+\definecolor{kidarkorange}{RGB}{184, 65, 69}
+\definecolor{kilightorange}{RGB}{254, 238, 235}
+\definecolor{kiblue}{RGB}{77, 181, 188}
+\definecolor{kilightblue}{RGB}{237, 244, 244}
+
+\setbeamercolor{title page}{fg=white}
+
+\setbeamercolor{normal text}{fg=black}
+\setbeamercolor{alerted text}{fg=kiorange}
+\setbeamercolor{example text}{fg=kiblue}
+
+\setbeamercolor{titlelike}{fg=kidarkplum}
+\setbeamercolor{frametitle}{parent={titlelike}}
+
+\setbeamercolor{footline}{fg=kidarkplum, bg=white}
+
+\setbeamercolor{block title}{bg=kidarkplum, fg=white}
+\setbeamercolor{block body}{bg=kiplum!15!white, fg=black}
+
+\setbeamercolor{block title alerted}{bg=kiorange, fg=black}
+\setbeamercolor{block body alerted}{bg=kiorange!30!white, fg=black}
+
+\setbeamercolor{block title example}{bg=kiblue, fg=white} 
+\setbeamercolor{block body example}{bg=kiblue!25!white, fg=black}
+
+\setbeamercolor{itemize item}{fg=kidarkplum}
+\setbeamercolor{itemize subitem}{fg=kidarkplum}
+
+\setbeamercolor{enumerate item}{fg=kidarkplum}
+\setbeamercolor{enumerate subitem}{fg=kidarkplum}
+
+\setbeamercolor{description item}{fg=kidarkplum}
+\setbeamercolor{description subitem}{fg=kidarkplum}
+
+\setbeamercolor{caption name}{fg=kidarkplum}
+
+\setbeamercolor{section in toc}{fg=kidarkplum}
+\setbeamercolor{subsection in toc}{fg=kidarkplum}
+\setbeamercolor{section number projected}{bg=kidarkplum}
+\setbeamercolor{subsection number projected}{bg=kidarkplum}
+
+\setbeamercolor{bibliography item}{fg=black}
+\setbeamercolor{bibliography entry author}{fg=black}
+\setbeamercolor{bibliography entry title}{fg=black}
+\setbeamercolor{bibliography entry location}{fg=black}
+\setbeamercolor{bibliography entry note}{fg=black} 
+
+% FONT STYLING
+\usefonttheme{professionalfonts}
+
+\usepackage[scaled]{berasans}
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\setbeamerfont{title}{size=\Large,series=\bfseries}
+\setbeamerfont{subtitle}{parent={normal text}, size=\small,shape=\itshape}
+\setbeamerfont{author}{size=\small,series=\mdseries}
+\setbeamerfont{institute}{size=\small,series=\mdseries}
+\setbeamerfont{date}{size=\small,series=\mdseries}
+
+\setbeamerfont{frametitle}{series=\bfseries,parent=structure} 
+
+\setbeamerfont{footnote}{size=\tiny}
+
+\setbeamerfont{caption name}{shape=\bfseries}
+\setbeamerfont{caption}{size=\scriptsize}
+
+% INNER STYLING
+
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{labelsep=period}
+
+\setbeamertemplate{itemize items}[circle]
+
+\defbeamertemplate*{title page}{KI}[1][] 
+{
+  \setbeamertemplate{footline}{} 
+  % Add kidarkplum background and white logo in top
+  \begin{tikzpicture}[remember picture, overlay]
+    \draw[fill=kidarkplum] (current page.south west) rectangle
+    (current page.north east);
+    \path (current page.north east) node[below left, inner sep=1em] {\includegraphics[width=.25\textwidth]{ki-logo-white.pdf}};
+  \end{tikzpicture}%
+  {\usebeamerfont{title}\inserttitle\par}
+  {\usebeamerfont{subtitle}\usebeamercolor{subtitle}\insertsubtitle\par}
+  \bigskip
+  {\usebeamerfont{author}\insertauthor\par}
+  {\usebeamerfont{institute}\insertinstitute\par}
+  {\usebeamerfont{date}\insertdate\par}
+  {\usebeamercolor{titlegraphic}\inserttitlegraphic}
+}
+
+\setbeamertemplate{endpage}{%
+\setbeamertemplate{footline}{} 
+    \begin{frame}
+      \begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=kidarkplum] (current page.south west) rectangle
+        (current page.north east);
+        \path (current page.center) node[] {\includegraphics[width=0.5\textwidth]{ki-logo-white.pdf}};
+      \end{tikzpicture}%
+    \end{frame} 
+}
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{section in toc}[circle]
+
+% OUTER STYLING
+\usepackage[datesep=/]{datetime2}
+\usepackage{hanging}
+
+\setbeamertemplate{navigation symbols}{}
+
+\addtobeamertemplate{frametitle}{{\vspace*{0.75em}\hspace*{0.75em}}}{} 
+
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace*{-3em}Karolinska Institutet\hfill\insertdate\hspace{2em}\insertpagenumber}}
+\setbeamertemplate{navigation symbols}{} 
+
+\addtobeamertemplate{footnote}{}{\vspace*{3em}} 
+
+\mode<all>
